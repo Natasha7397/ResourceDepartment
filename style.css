@@ -56,6 +56,37 @@ a {
         
 }
 
+ 
+
+.topmenu > li { 
+display: inline-block; 
+margin-right: 20px; 
+position: relative;
+} 
+.topmenu > li:last-child { 
+margin-right: 0; 
+} 
+.submenu .one a { 
+display: block; 
+transition: .5s linear;
+} 
+ 
+.submenu { 
+position: absolute;
+z-index: 10; 
+transition: 0.5s ease-in-out; 
+} 
+
+.one .submenu { 
+display: none; 
+background: #e8aead;
+
+} 
+.one ul li:hover .submenu { 
+display: block; 
+} 
+
+
 /* Header */
 
 #header-wrapper {
@@ -138,17 +169,18 @@ a {
 /* Menu */
 
 #menu {
-	float: right;
-	width: 500px;
+	float: left;
+	width: 600px;
 	height: 90px;
-	margin: 0 auto;
+	margin: 0 ;
 	padding: 0;
+        padding: 100px 0px 0px 0px;
 }
 
 #menu ul {
-	float: right;
+	float: none;
 	margin: 0;
-	padding: 85px 0px 0px 0px;
+	
 	list-style: none;
 	line-height: normal;
 }
@@ -159,12 +191,12 @@ a {
 
 #menu a {
 	display: block;
-	margin-right: 1px;
-	padding: 10px 0px 15px 30px;
+	margin-right: 0px;
+	padding: 0px 0px 5px 0px;
 	text-decoration: none;
 	
-	text-align: center;
-	font-size: 20px;
+	text-align: left;
+	font-size: 25px;
     
 	font-weight: bold;
 	color: #DB7093;
@@ -364,3 +396,12 @@ a {
 	padding-top: 0px;
 	background: none;
 }
+
+
+        
+
+
+
+
+
+ 
