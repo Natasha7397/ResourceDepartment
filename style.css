@@ -396,7 +396,52 @@ display: block;
 	padding-top: 0px;
 	background: none;
 }
+.submenu li {
+        
+    min-width: 220px;
+    border-bottom: 1px solid #DB7093;
+    
+}
 
+.submenu{
+    padding-left: 5px;
+}
+
+table {
+    font-family: "Lucida Sans Unicode", "Lucida Grande", Sans-Serif;
+    font-size: 14px;
+    background: white;
+    width: 100%;
+    border-collapse: collapse;
+    text-align: center;
+    margin: 0 auto 20px;
+    color: #e6acac;
+    
+
+}
+tbody {
+    display: table-row-group;
+    vertical-align: middle;
+    border-color: inherit;
+}
+tr {
+    display: table-row;
+    vertical-align: inherit;
+    border-color: inherit;
+}
+th:first-child, .td:first-child {
+    border-left: 15px solid white;
+}
+
+th {
+    font-weight: normal;
+    font-size: 14px;
+    border-bottom: 2px solid #DB7093;
+    border-right: 30px solid #fff;
+    border-left: 30px solid #fff;
+    color: #DB7093;
+    padding: 8px 2px;
+}
 
         
 
