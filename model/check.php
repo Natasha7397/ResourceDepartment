@@ -15,6 +15,7 @@
                 fwrite($f,"Справка №". rand(1, 100)."\r\n" .$_POST['name']."\r\n".$_POST['mail']."\r\n".$_POST['phone']."\r\n".$_POST['message']."\r\n"."\r\n"); 
                 $f = fopen("textfile.txt", "r"); 
                 fclose($f);
+                
                 $hostname = 'localhost'; 
                 $username = 'root'; 
                 $passwrd = ''; 

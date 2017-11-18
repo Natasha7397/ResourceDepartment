@@ -373,7 +373,7 @@ display: block;
 }
 
 .list-style2 li {
-    padding: 7px 0px 7px 0px;
+    padding: 7px 0px 7px 15px;
 	background: url(images/img06.png) repeat-x left top;
     width: 300px;
     
@@ -442,7 +442,45 @@ th {
     color: #DB7093;
     padding: 8px 2px;
 }
-
+@media screen and (min-width: 320px) and (max-width: 480px){
+    #sidebar { /* красный список*/
+	float: left;
+	width: 800px;
+	margin: 0px;
+        font-size: 30px;
+        font-weight: bold;
+	padding: 0px 0px 0px 350px;
+	color: #787878;
+        text-align: justify;
+}
+#content { /* заголовок */
+	width:950px;
+        padding: 0px 0px 0px 20px;
+        background: white;
+        font-size: 40px;
+        text-align: center;
+       
+}
+.post .entry { /* текст */
+	padding: 0px 0px 20px 0px;
+	padding-bottom: 20px;
+	text-align: justify;
+        font-size: 30px;
+}
+.list-style2 li {
+    padding: 7px 0px 7px 15px;
+}
+.list-style2 a {
+   font-size: 30px;
+}
+#menu  a {
+	font-size: 50px;
+}
+#menu   {
+	padding: 50px 0px 30px 40px;
+        text-align: center;
+}
+}
         
 
 

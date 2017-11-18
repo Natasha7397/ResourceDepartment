@@ -2,11 +2,16 @@
 
 <head>
     <title>Отдел кадров</title>
-    <link rel="shortcut icon" href="/images/myspace.ico" type="image/x-icon">
-        <link href="style.css" rel="stylesheet" type="text/css" media="screen" />
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    </meta>
+        <link href="style.css" rel="stylesheet" type="text/css" >
+        
         <link href="modal-contact.css" rel="stylesheet"/>
         <script src="http://ajax.googleapis.com/ajax/libs/jquery/1/jquery.min.js"></script>
         <script src="dm-modal.js"></script>
+        <script src="CheckScript.js"></script>
+        
+        </link>
 </head>
 <body>
     <div id="header-wrapper">
@@ -21,19 +26,8 @@
 <li><a href="#">Главная</a></li> 
 <li><a href="#">Вакансии</a></li> 
 <li><a href="#">Документы</a></li> 
-<li><a href="#">Справки</a> 
-<ul class="submenu"> 
- <?php 
-$f = fopen("D:/xampp/htdocs/ResourceDepartment/spravka.txt", "r"); 
-while(!feof($f)) { 
-$spravka = fgets($f); 
-if (strlen($spravka) > 0){ 
-echo "<li><a> ". $spravka. "</a></li>"; 
-} 
-} 
-fclose($f); 
-?> 
-</ul> 
+<li><a >Справки</a> 
+    <ul class="submenu"><?php require  'model/ReadingFile.php';?></ul> 
 </li> 
 </ul> 
 </nav> 
@@ -104,42 +98,7 @@ fclose($f);
                                 </div>
                                 </div>
 
-<div class="conteiner">
-        <!-- проверка формы. Начало -->
-        <script>
-            function checkForm(form) {
-                var name = form.name.value;
-                var n = name.match(/^[A-Za-zА-Яа-я ]*[A-Za-zА-Яа-я ]+$/);
-                if (!n) {
-                    alert("Имя введено неверно, пожалуйста, исправьте ошибку");
-                    return false;
-                }
-                var phone = form.phone.value;
-                var p = phone.match(/^[0-9+][0-9- ]*[0-9- ]+$/);
-                if (!p) {
-                    alert("Телефон введен неверно");
-                    return false;
-                }
-                var mail = form.mail.value;
-                var m = mail.match(/^[A-Za-z0-9][A-Za-z0-9\._-]*[A-Za-z0-9_]*@([A-Za-z0-9]+([A-Za-z0-9-]*[A-Za-z0-9]+)*\.)+[A-Za-z]+$/);
-                if (!m) {
-                    alert("E-mail введен неверно, пожалуйста, исправьте ошибку");
-                    return false;
-                }
-                var message = form.message.value;
-                var m = message.match(/^[A-Za-zА-Яа-я ]*[A-Za-zА-Яа-я ]+$/);
-                if (!m) {
-                    alert("Сообщение введено неверно, пожалуйста, исправьте ошибку");
-                    return false;
-                }
-                return true;
-                   
-            }
-        </script>
-      
-        <!-- проверка формы. Конец -->
-         
-    </div>
+
 
                                 <div id="popup_contact" class="popup_block" style=" width: 500px; margin-top: -219px; margin-left: -290px;">
                                     <a href="#" title="Закрыть" class="close"></a>
@@ -150,7 +109,7 @@ fclose($f);
                                                 Обращаю Ваше внимание, что в пункт "Сообщение" необходимо указать наименование нужной справки.
                                             </p>
                                     </div>
-                                    <form id="form" action="check.php" method="post" >	
+                                    <form id="form" action="check.php" method="post" onsubmit="checkForm(form)" >	
                                         <fieldset>
                                             <p>
                                                 <label for="name">ФИО *</label>
@@ -171,8 +130,7 @@ fclose($f);
                                                 <textarea name="message" id="message" cols="30" rows="10"></textarea>
                                             </p>								
                                         </fieldset>
-                                        <a href="index.php" ><input  onclick="checkForm(form)" value="Отправить" class="send-message" type="submit"></a> 
-                                                                            <!--<p href="index.php" class="submit"    ><button type="reset" >Отправить</button></p>	-->					
+                                        <a href="index.php" ><input  onclick="checkForm(form)" value="Отправить" class="send-message" type="submit"></a> 					
                                     </form>
                                 </div>
                                 </body>
