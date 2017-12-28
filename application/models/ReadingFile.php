@@ -1,7 +1,8 @@
  <head>
-    <link href="style.css" rel="stylesheet" type="text/css" media="screen" />
+    <link rel="stylesheet" type="text/css" href="styles/style.css" />
 </head>
 <?php 
+
 $f = fopen("D:/xampp/htdocs/ResourceDepartment/spravka.txt", "r"); 
 while(!feof($f)) { 
 $spravka = fgets($f); 
@@ -10,7 +11,7 @@ echo "<li><a> ". $spravka. "</a></li>";
 } 
 } 
 fclose($f); 
-?> 
+  
 
 
 
