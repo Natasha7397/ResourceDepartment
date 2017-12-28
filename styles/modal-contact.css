@@ -1,12 +1,8 @@
-/*
-* Оформление контактной формы
-* без дополительных изображений;
-* исключительно средствами CSS;
-*
-*  @dobrovoi dbmast.ru
-*/
-
-/*--Слой затемнения фона--*/
+@media screen and (min-width: 320px) and (max-width: 480px){
+    .popup_block{
+        width: 800px;
+    }
+}
 #fade {
 	position: fixed;
     top: 0;
@@ -26,23 +22,22 @@
     left: 50%;
 	z-index: 99999;
 	display: none; /*--по умолчанию скрыт--*/
-	float: left;
-    -webkit-box-sizing: content-box;
-    -moz-box-sizing: content-box; 
+	float: left; 
     box-sizing: content-box;
 	padding: 15px;
 	border: 10px solid #e6acab;
 /*-- скругленные углы--*/
-	-webkit-border-radius: 5px;
-	-moz-border-radius: 5px;
+	
 	border-radius: 5px;
 	background: #fff;
 /*--тени для блока--*/
-	-webkit-box-shadow: 0px 0px 20px #000;
-	-moz-box-shadow: 0px 0px 20px #000;
+	
 	box-shadow: 0px 0px 20px #000;
     color: #000;
 	font-size: .9em;
+        width: 800px; 
+        margin-top: -219px; 
+        margin-left: -290px;
 }
 /*--Фиксированное позиционирование для тупого IE6--*/
 /**html #fade {
@@ -74,23 +69,15 @@
     width: 24px;
     height: 24px;
     border: 2px solid #ccc;
-    -webkit-border-radius: 15px;
-    -moz-border-radius: 15px;
-    -ms-border-radius: 15px;
-    -o-border-radius: 15px;
-    border-radius: 15px;
+        border-radius: 15px;
     background-color: rgba(61, 61, 61, 0.8);
-    -webkit-box-shadow: 0px 0px 10px #000;
-    -moz-box-shadow: 0px 0px 10px #000;
+   
     box-shadow: 0px 0px 10px #000;
     text-align: center;
     text-decoration: none;
     font-weight: bold;
     line-height: 20px;
-    -webkit-transition: all ease .8s;
-    -moz-transition: all ease .8s;
-    -ms-transition: all ease .8s;
-    -o-transition: all ease .8s;
+    
     transition: all ease .8s;
 }
 .close:before {
@@ -102,10 +89,7 @@
 .close:hover {
     background-color: rgba(252, 20, 0, 0.8);
 /*--крутим кнопку при наведении--*/
-    -webkit-transform: rotate(360deg);
-    -moz-transform: rotate(360deg);
-    -ms-transform: rotate(360deg);
-    -o-transform: rotate(360deg);
+    
     transform: rotate(360deg);    
 }
 /* контактная форма */

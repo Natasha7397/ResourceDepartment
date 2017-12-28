@@ -1,9 +1,8 @@
 
-
 body {
 	margin: 0;
 	padding: 0;
-	background:  url(images/img01.jpg) repeat;
+	background-color:  #e6acac;
 	font-family: 'Times', serif;
 	font-size: 16px;
 	color: #8A8985;
@@ -91,8 +90,8 @@ display: block;
 
 #header-wrapper {
 	overflow: hidden;
-	height: 600px;
-	background: url(images/img02.jpg) repeat-x left top;
+	height: 550px;
+/*	background: url(D:/xampp/htdocs/ResourceDepartment/images/img02.jpg) repeat-x left top;*/
 }
 
 #header {
@@ -100,7 +99,7 @@ display: block;
 	height: 200px;
 	margin: 0 auto;
 	padding: 0px 20px;
-	background: url(images/img01.jpg) no-repeat left top;
+/*	background: url(D:/xampp/htdocs/ResourceDepartment/images/img01.jpg) no-repeat left top;*/
 }
 
 /* Banner */
@@ -222,7 +221,7 @@ display: block;
 	float: left;
 	width: 620px;
 	padding: 0px 40px 0px 0px;
-	background: url(images/img05.jpg) no-repeat right 40px;
+/*	background: url(images/img05.jpg) no-repeat right 40px;*/
 }
 
 .post {
@@ -297,7 +296,7 @@ display: block;
 /* Footer */
 
 #footer-content {
-	background: url(images/img04.png) no-repeat center top;
+/*	background: url(images/img04.png) no-repeat center top;*/
 	color: #E2B8C6;
 }
 
@@ -322,7 +321,7 @@ display: block;
 	height: 100px;
 	margin: 0 auto;
 	padding: 50px 0px 0px 0px;
-	background: url(images/img04.png) no-repeat center top;
+/*	background: url(images/img04.png) no-repeat center top;*/
 }
 
 
@@ -346,7 +345,7 @@ display: block;
 .box1 {
 	overflow: hidden;
 	height: 300px;
-	background: url(images/img04.jpg) no-repeat center bottom;
+/*	background: url(images/img04.jpg) no-repeat center bottom;*/
 }
 
 .list-style1 {
@@ -374,7 +373,7 @@ display: block;
 
 .list-style2 li {
     padding: 7px 0px 7px 15px;
-	background: url(images/img06.png) repeat-x left top;
+/*	background: url(images/img06.png) repeat-x left top;*/
     width: 300px;
     
 }
@@ -442,7 +441,27 @@ th {
     color: #DB7093;
     padding: 8px 2px;
 }
-@media screen and (min-width: 320px) and (max-width: 480px){
+
+.slider-box{
+	width:970px;
+	height:320px;
+	overflow:hidden;
+        border: 15px solid #F4F4F4;
+        margin: auto;
+}
+.slider{
+	position:relative;
+	width:10000px;
+	height:320px;
+}
+.slider img{
+	float:left;
+	z-index:0;
+        
+}
+
+
+@media screen and (min-width:100px) and (max-width: 1920px){
     #sidebar { /* красный список*/
 	float: left;
 	width: 800px;
@@ -480,11 +499,33 @@ th {
 	padding: 50px 0px 30px 40px;
         text-align: center;
 }
+.slider-box{
+	 margin: auto;
+  position: absolute;
+  top:200px; left: 0;  right: 0;
 }
-        
+}
 
+.new-select-style-wpandyou select {
+    border-radius: 0;
+    background: #e6acac;
+    height: 50px;
+    padding: 5px;
+    border: 2px;
+    font-size: 20px;
+    line-height: 1;
+    width: 300px;
+    color:#7D7764;
+}
+option {
+background: white;
+}
+option :hover
+{
+  background: orange;
+  color: orange;
+}
 
-
-
-
- 
+select li:hover{
+    background: orange; 
+}
